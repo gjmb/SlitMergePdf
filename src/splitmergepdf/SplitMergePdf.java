@@ -163,7 +163,7 @@ public class SplitMergePdf {
 
         System.out.println("Pdf files merged successfully.");
     }
-
+/*
     public static void main(String[] args) {
         // TODO code application logic here
         /*
@@ -179,7 +179,7 @@ public class SplitMergePdf {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        */
+        
         try {
             String inputPdf = "C:\\Users\\gabri\\Documents\\PdfSpliterTest\\Source";
             String[] files = getFilesNames (inputPdf);
@@ -208,5 +208,5 @@ public class SplitMergePdf {
         
 
     }
-
+    */
 }
