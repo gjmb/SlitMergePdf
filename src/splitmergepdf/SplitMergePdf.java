@@ -69,12 +69,9 @@ public class SplitMergePdf {
     }
 
 
-    static void splitPdfFile(String inputPdf, int startPage, int endPage) throws Exception {
+    static void splitPdfFile(String inputPdf, PdfReader pdfReader, int startPage, int endPage) throws Exception {
         disableAccessWarnings();
         //Create pdfReader objects.
-
-        PdfReader pdfReader = new PdfReader(inputPdf);
-
         //Get total no. of pages in the pdf file.
         int totalPages = pdfReader.getNumberOfPages();
 
