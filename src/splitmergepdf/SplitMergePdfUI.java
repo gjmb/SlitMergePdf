@@ -21,8 +21,7 @@ import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import static splitmergepdf.SplitMergePdf.disableAccessWarnings;
 import static splitmergepdf.SplitMergePdf.getFilesNames;
-import static splitmergepdf.SplitMergePdf.mergePdfFiles;
-import static splitmergepdf.SplitMergePdf.splitPdfFile;
+
 
 
 /**
@@ -258,7 +257,8 @@ public class SplitMergePdfUI extends javax.swing.JFrame {
             pdfReader = new PdfReader(file);
             totalPages = pdfReader.getNumberOfPages();
             
-            SplitMergePdf.splitPdfFile(file, pdfReader, 1, totalPages);
+            SplitMergePdf n = new SplitMergePdf();
+            n.splitPdfFile(file, pdfReader, 1, totalPages);
             
             
             
@@ -327,7 +327,8 @@ public class SplitMergePdfUI extends javax.swing.JFrame {
             		new FileOutputStream(outPut);
  
             //call method to merge pdf files.
-            mergePdfFiles(inputPdfList, outputStream); 
+            SplitMergePdf n = new SplitMergePdf();
+            n.mergePdfFiles(inputPdfList, outputStream); 
             
          } catch (Exception e) {
             e.printStackTrace();
